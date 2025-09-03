@@ -9,15 +9,18 @@
 }
 
 [data-theme="dark"] {
-    --bg-dark: oklch(0.1 0.02 255);
+    --bg-dark: oklch(0.15 0.02 255);
     --bg: oklch(0.15 0.02 255);
     --bg-light: oklch(0.2 0.02 255);
     --text: oklch(0.96 0.04 255);
     --text-muted: oklch(0.76 0.04 255);
+    --card-text: oklch(0 0.01 255);
+    --card-text-muted: oklch(0.4 0.04 255);
+    --card-info: oklch(0.44 0.05 260);
     --highlight: oklch(0.5 0.04 255);
     --border: oklch(0.4 0.04 255);
     --border-muted: oklch(0.3 0.04 255);
-    --primary: oklch(0.76 0.1 255);
+    --primary: oklch(0.7 0.1 255);
     --secondary: oklch(0.76 0.1 75);
     --danger: oklch(0.7 0.05 30);
     --warning: oklch(0.7 0.05 100);
@@ -114,15 +117,17 @@ body {
 main {
     display: flex;
     height: 90vh;
+    transition: all 0.3s ease;
 }
 
 
 .side-bar-container {
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: var(--bg-light);
     width: 300px;
     box-shadow: 0 0 10px var(--border-muted);
+    transition: all 0.3s ease;
 }
 
 .search-bar-container {
@@ -173,12 +178,13 @@ main {
     margin-left: auto;
     margin-right: 20px;
     font-weight: 600;
-    color: var(--text);
+
 }
 
 .loc-item {
     display: flex;
     gap: 0.25rem;
+    color: var(--text);
 }
 
 
@@ -192,6 +198,44 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: relative;
+}
+
+.change-temp {
+    position: absolute;
+    gap: 0.25rem;
+    top: -1rem;
+    left: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+}
+
+.change-temp-button {
+    width: 40px;
+    height: 20px;
+    background-color: var(--text);
+    border-radius: 50px;
+    position: relative;
+    box-shadow: 0 0 5px var(--border-muted);
+}
+
+.change-temp-button::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--highlight);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50px;
+    z-index: 999;
+    box-shadow: 0 0 3px var(--highlight);
+    transition: all 0.3s;
+}
+ .change-temp:hover .change-temp-button::before{
+    right: 50%;
 }
 
 .card-container {
