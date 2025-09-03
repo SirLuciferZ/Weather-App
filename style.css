@@ -67,26 +67,80 @@ body {
     left: 1.5rem;
 }
 
+.left span {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.15s;
+    color: var(--text);
+}
+
+.left span:hover {
+    scale: 1.1;
+    color: var(--success);
+}
+
 
 .header-container .center a {
     color: var(--text);
     text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.15s;
 }
 
 .links {
     display: flex;
-
+    gap: 1rem;
 }
 
 .links li {
     list-style: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1.3rem;
 }
+
+.links li:hover a {
+    background-color: var(--secondary);
+    color: var(--card-text);
+    box-shadow: 0 0 5px var(--border-muted);
+}   
+
+
+
 
 
 /*          main page         */
 
+main {
+    display: flex;
+}
+
+
+.side-bar-container{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-light);
+    width: 300px;
+}
+
+
+
+.loc-item{
+    display: flex;
+}
+
+
+
+
+.weather-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 
 .card-container {
     display: flex;
@@ -95,7 +149,7 @@ body {
     flex-wrap: wrap;
     gap: 2rem;
     padding: 1rem;
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 
@@ -108,6 +162,11 @@ body {
     width: 220px;
     height: 400px;
     transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    scale: 1.05;
 }
 
 .card h1 {
@@ -121,7 +180,8 @@ body {
 
 }
 
-.card h2, .card h3 {
+.card h2,
+.card h3 {
     color: var(--card-text);
     position: absolute;
     bottom: 125px;
@@ -159,4 +219,53 @@ body {
     height: 250px;
     width: 150px;
     left: 80px;
+}
+
+
+
+.today-temp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+.temp-container {
+    background-color: var(--card-info);
+    padding: 1.5rem;
+    color: var(--card-text);
+    border-radius: 20px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 0 10px var(--border-muted);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.temp-container:hover {
+    scale: 1.1;
+}
+
+.temp-container span {
+    align-self: center;
+    margin-bottom: 5px;
+    color: var(--border-muted);
+}
+
+.temp {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 3px;
+
+}
+
+.time {
+    font-size: 0.8rem;
+    color: var(--info);
 }
