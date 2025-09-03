@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', arial, sans-serif;
+
+}
+
+[data-theme="dark"] {
+    --bg-dark: oklch(0.1 0.02 255);
+    --bg: oklch(0.15 0.02 255);
+    --bg-light: oklch(0.2 0.02 255);
+    --text: oklch(0.96 0.04 255);
+    --text-muted: oklch(0.76 0.04 255);
+    --highlight: oklch(0.5 0.04 255);
+    --border: oklch(0.4 0.04 255);
+    --border-muted: oklch(0.3 0.04 255);
+    --primary: oklch(0.76 0.1 255);
+    --secondary: oklch(0.76 0.1 75);
+    --danger: oklch(0.7 0.05 30);
+    --warning: oklch(0.7 0.05 100);
+    --success: oklch(0.7 0.05 160);
+    --info: oklch(0.7 0.05 260);
+}
+
+[data-theme="light"] {
+    --bg-dark: oklch(0.92 0.02 255);
+    --bg: oklch(0.96 0.02 255);
+    --bg-light: oklch(1 0.02 255);
+    --text: oklch(0.15 0.04 255);
+    --text-muted: oklch(0.4 0.04 255);
+    --card-text: oklch(1 0.01 255);
+    --card-text-muted: oklch(0.8 0.04 255);
+    --card-info: oklch(0.85 0.05 260);
+    --highlight: oklch(1 0.04 255);
+    --border: oklch(0.6 0.04 255);
+    --border-muted: oklch(0.7 0.04 255);
+    --primary: oklch(0.4 0.1 255);
+    --secondary: oklch(0.4 0.1 75);
+    --danger: oklch(0.5 0.05 30);
+    --warning: oklch(0.5 0.05 100);
+    --success: oklch(0.5 0.05 160);
+    --info: oklch(0.5 0.05 260);
+}
+
+body {
+    background-color: var(--bg-dark);
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: var(--bg);
+    box-shadow: 0 0 6px var(--border-muted);
+    height: 80px;
+    position: relative;
+    font-weight: 300;
+}
+
+.left {
+    margin-right: 3rem;
+    position: absolute;
+    left: 1.5rem;
+}
+
+
+.header-container .center a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.links {
+    display: flex;
+
+}
+
+.links li {
+    list-style: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.3rem;
+}
+
+
+/*          main page         */
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+    margin-top: 5rem;
+}
+
+
+.card {
+    background-color: var(--primary);
+    padding: 7rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 0 5px var(--border-muted);
+    position: relative;
+    width: 220px;
+    height: 400px;
+    transition: all 0.3s ease;
+}
+
+.card h1 {
+    color: var(--card-text);
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 800;
+    font-size: 3rem;
+
+}
+
+.card h2, .card h3 {
+    color: var(--card-text);
+    position: absolute;
+    bottom: 125px;
+    font-weight: 800;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card h3 {
+    bottom: 155px;
+    color: var(--card-text-muted);
+}
+
+.predictions {
+    color: var(--card-info);
+    font-weight: 600;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 82%;
+    row-gap: 3px;
+}
+
+.predictions p {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.card img {
+    position: absolute;
+    top: -80px;
+    height: 250px;
+    width: 150px;
+    left: 80px;
+}
