@@ -122,19 +122,20 @@ main {
 
 
 .side-bar-container {
-    display: none;
+    display: flex;
     flex-direction: column;
     background-color: var(--bg-light);
     width: 300px;
     box-shadow: 0 0 10px var(--border-muted);
     transition: all 0.3s ease;
+    padding: 1rem;
 }
 
 .search-bar-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     margin-bottom: 1rem;
 }
 
@@ -234,9 +235,10 @@ main {
     box-shadow: 0 0 3px var(--highlight);
     transition: all 0.3s;
 }
- .change-temp:hover .change-temp-button::before{
+
+/* .change-temp:hover .change-temp-button::before{
     right: 50%;
-}
+} */
 
 .card-container {
     display: flex;
@@ -338,6 +340,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     box-shadow: 0 0 10px var(--border-muted);
     transition: 0.3s;
     cursor: pointer;
@@ -356,11 +359,12 @@ main {
 .temp {
     font-weight: 600;
     color: var(--text);
-    margin-bottom: 3px;
+
 
 }
 
 .time {
+    margin-bottom: 3px;
     font-size: 0.8rem;
     color: var(--info);
 }
